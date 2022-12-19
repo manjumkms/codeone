@@ -7,3 +7,43 @@
         """
 nums=[1,2,3,1]
 print(len(nums) != len(set(nums)))
+
+#ADD-TO-ARRAY FORM
+
+def addToArrayForm(self, A, K):
+        for i in range(len(A) - 1, -1, -1):
+            K, A[i] = divmod(A[i] + K, 10)
+        return [int(i) for i in str(K)] + A if K else A
+
+#COUNT INVESIONS
+
+def getInversions(arr, n):
+    counter = 0   
+    for i in c(arr,2):       
+        if i[0]>i[1]:            
+         counter+=1    
+        return counter
+
+#TRANSPOSE MATRIX
+
+"""class Solution(object):
+    def transpose(self, A):
+"""
+A=[[1,2,3],[4,5,6],[7,8,9]]
+print([[A[i][j] for i in range(len(A))] for j in range(len(A[0]))])
+
+#FIND THE DUPLICATE NUMBER
+
+#class Solution(object):
+#	def findDuplicate(self, nums):
+nums=[1,3,2,2]
+for i in range(len(nums)):
+	index = abs(nums[i])
+	print (nums,index)
+	if 	nums[index] > 0:
+		nums[index] = -nums[index]
+	else:
+		return index
+
+
+    
